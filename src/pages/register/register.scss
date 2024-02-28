@@ -1,0 +1,89 @@
+.register {
+    height: 100vh;
+    background-color: #7CA5B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: white;
+        border-radius: 10px;
+        min-height: 600px;
+        overflow: hidden;
+
+        .left {
+            flex: 1;
+            background: linear-gradient(to bottom, rgba(58, 58, 123, 0.5), rgba(46, 46, 168, 0.5)), url("https://images.pexels.com/photos/6146704/pexels-photo-6146704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
+            background-size: cover;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+            
+
+            h1 {
+                font-size: 80px;
+                line-height: 100px;
+            }
+            
+            p {
+                font-size: 25px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            button {
+                width: 50%;
+                padding: 10px;
+                border: none;
+                background-color: white;
+                color: rgb(20, 20, 45);
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 20px;
+            }
+        }
+
+        .right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+
+            h1 {
+                color: rgb(82, 53, 29);
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid lightblue;
+                    padding: 20px 10px;
+                }
+
+                button {
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: #BFCDE0;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    color: rgb(20, 20, 45);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
