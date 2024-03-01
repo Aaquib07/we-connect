@@ -1,55 +1,83 @@
+@import '../../style.scss';
+
 .leftbar {
-    flex: 2;
+    @include themify($themes) {
+        flex: 2;
+        position: sticky;
+        top: 70px;
+        height: calc(100vh - 70px);
+        overflow: scroll;
+        background-color: themed("itemColor");
+        color: themed("color");
 
-    .container {
-        padding: 20px;
-
-        hr {
-            margin: 20px 0px;
-            border: none;
-            height: 0.5px;
-            background-color: lightblue;
+        &::-webkit-scrollbar {
+            display: none;
         }
 
-        .menu {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .container {
+            padding: 20px;
 
-            span {
-                font-size: 12px;
+            hr {
+                margin: 20px 0px;
+                border: none;
+                height: 0.5px;
+                background-color: themed("border");
             }
 
-            .user {
+            .menu {
                 display: flex;
-                align-items: center;
-                gap: 10px;
-
-                img {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                }
+                flex-direction: column;
+                gap: 20px;
 
                 span {
-                    font-size: 14px;
-                }
-            }
-
-            .item {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-
-                img {
-                    width: 30px;
-                    height: 30px;
-
+                    font-size: 12px;
                 }
 
-                span {
-                    font-size: 14px;
+                .user {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    cursor: pointer;
+                    padding: 0px;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+                .user:hover {
+                    background-color: lightyellow;
+                    border-radius: 10px;
+                }
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    cursor: pointer;
+                    padding: 2px;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+                .item:hover {
+                    background-color: lightyellow;
+                    border-radius: 10px;
                 }
             }
         }

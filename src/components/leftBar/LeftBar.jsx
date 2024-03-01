@@ -8,15 +8,20 @@ import Gaming from '../../assets/gaming.png'
 import Gallery from '../../assets/gallery.png'
 import Videos from '../../assets/video.png'
 import Messages from '../../assets/messages.png'
+import { useContext } from 'react'
+import { AuthContext } from '../../context/authContext'
 
 const LeftBar = () => {
+
+  const {currentUser} = useContext(AuthContext)
+
   return (
     <div className="leftbar">
       <div className="container">
         <div className="menu">
           <div className="user">
-            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-            <span>Aaquib</span>
+            <img src={currentUser.profilePic} alt="" />
+            <span>{currentUser.name}</span>
           </div>
           <div className="item">
             <img src={Groups} alt="" />
@@ -49,6 +54,42 @@ const LeftBar = () => {
           <div className="item">
             <img src={Videos} alt="" />
             <span>Videos</span>
+          </div>
+          <div className="item">
+            <img src={Messages} alt="" />
+            <span>Messages</span>
+          </div>
+          <div className="item">
+            <img src={Messages} alt="" />
+            <span>Messages</span>
+          </div>
+          <div className="item">
+            <img src={Messages} alt="" />
+            <span>Messages</span>
+          </div>
+          <div className="item">
+            <img src={Messages} alt="" />
+            <span>Messages</span>
+          </div>
+          <div className="item">
+            <img src={Messages} alt="" />
+            <span>Messages</span>
+          </div>
+          <div className="item">
+            <img src={Messages} alt="" />
+            <span>Messages</span>
+          </div>
+          <div className="item">
+            <img src={Messages} alt="" />
+            <span>Messages</span>
+          </div>
+          <div className="item">
+            <img src={Messages} alt="" />
+            <span>Messages</span>
+          </div>
+          <div className="item">
+            <img src={Messages} alt="" />
+            <span>Messages</span>
           </div>
           <div className="item">
             <img src={Messages} alt="" />

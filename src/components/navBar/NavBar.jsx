@@ -4,9 +4,17 @@ import { MdDarkMode } from 'react-icons/md'
 import { IoGrid } from 'react-icons/io5'
 import { CiSearch } from "react-icons/ci";
 import { IoMdNotifications } from "react-icons/io";
+import { MdOutlineWbSunny } from "react-icons/md";
 import './navBar.scss'
+import { useContext } from 'react';
+import { DarkModeContext } from '../../context/darkModeContext';
+import { AuthContext } from '../../context/authContext';
 
 const NavBar = () => {
+
+    const {darkMode, toggleMode} = useContext(DarkModeContext)
+    const {currentUser} = useContext(AuthContext)
+
   return (
     <div className='navbar'>
         <div className="left">
@@ -14,7 +22,7 @@ const NavBar = () => {
                 <span>We-Connect</span>
             </Link>
             <FaHome />
-            <MdDarkMode />
+            {darkMode ? <MdOutlineWbSunny onClick={toggleMode} /> : <MdDarkMode onClick={toggleMode} />}
             <IoGrid />
             <div className="search">
                 <CiSearch />
@@ -25,8 +33,8 @@ const NavBar = () => {
             <FaUser />
             <IoMdNotifications />
             <div className="user">
-                <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                <span>Aaquib</span>
+                <img src={currentUser.profilePic} alt="" />
+                <span>{currentUser.name}</span>
             </div>
         </div>
     </div>
