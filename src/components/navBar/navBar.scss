@@ -12,6 +12,7 @@
         top: 0;
         background-color: themed("itemColor");
         color: themed("color");
+        z-index: 500;
 
         .left {
             display: flex;

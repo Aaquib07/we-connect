@@ -1,5 +1,4 @@
 import './leftBar.scss'
-import Friends from '../../assets/friends.png'
 import Groups from '../../assets/group.png'
 import Market from '../../assets/marketplace.png'
 import Memories from '../../assets/memories.png'
@@ -54,42 +53,6 @@ const LeftBar = () => {
           <div className="item">
             <img src={Videos} alt="" />
             <span>Videos</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
           </div>
           <div className="item">
             <img src={Messages} alt="" />
