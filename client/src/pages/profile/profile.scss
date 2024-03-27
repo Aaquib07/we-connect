@@ -1,0 +1,104 @@
+@import '../../style.scss';
+
+.profile {
+    @include themify($themes) {
+        background-color: themed("bgSoft");
+        color: themed("color");
+
+        .images {
+            width: 100%;
+            height: 300px;
+            position: relative;
+
+            .cover {
+                width: 100%;
+                height: 100%;
+            }
+
+            .profilePic {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 200px;
+            }
+        }
+
+        .profileContainer {
+            padding: 20px 70px;
+            display: flex;
+            flex-direction: column;
+            
+            @include mobile {
+                padding: 10px;
+            }
+
+            @include tablet {
+                padding: 20px;
+            }
+
+            .user-info {
+                padding: 20px;
+                background-color: themed("itemColor");
+                box-shadow: 5px 5px 5px themed("boxshadowColor");
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 50px;
+
+                @include mobile {
+                    flex-direction: column;
+                    height: 30vh;
+                    padding: 20px;
+                    margin-top: 100px;    
+                }
+
+                .left {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+
+
+                    span {
+                        font-size: 30px;
+                        font-weight: 500;
+                    }
+                }
+
+                .center {
+                    flex: 1;
+                    display: flex;
+                    margin-top: 80px;
+
+                    button {
+                        padding: 10px;
+                        border: none;
+                        background-color: #1F487E;
+                        border-radius: 10px;
+                        font-size: 14px;
+                        color: peachpuff;
+                        cursor: pointer;
+
+                        @include mobile {
+                            padding: 20px 50px;
+                        }
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
